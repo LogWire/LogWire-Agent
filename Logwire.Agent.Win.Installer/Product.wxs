@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<Product Id="*" Name="Logwire Windows Agent" Language="1033" Version="1.0.0.0" Manufacturer="Logwire" UpgradeCode="10408125-9fcc-4dec-8bca-b76b3be41bce">
+		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+
+		<MajorUpgrade AllowSameVersionUpgrades="yes" DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+		<MediaTemplate EmbedCab="yes" />
+
+		<Feature Id="ProductFeature" Title="Logwire Windows Agent" Level="1">
+			<ComponentGroupRef Id="ProductComponents" />
+		</Feature>
+	</Product>
+
+  <Fragment>
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="INSTALLFOLDER" Name="Logging Agent" />
+      </Directory>
+    </Directory>
+  </Fragment>
+
+  <Fragment>
+
+    <ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+
+      <Component Id="Newtonsoft">
+        <File Id="Newtonsoft.Json.dll" KeyPath="yes" Source="$(var.logging-workstation-agent.TargetDir)/Newtonsoft.Json.dll" />
+      </Component>
+
+      <Component Id="ProductComponent">
+        <File
+          Id="AuthenticationDetectionServiceEXE"
+          Name="logging-workstation-agent.exe"
+          DiskId="1"
+          Source="$(var.logging-workstation-agent.TargetPath)"
+          Vital="yes"
+          KeyPath="yes" />
+
+        <ServiceInstall Id="ServiceInstaller" Type="ownProcess" Vital="yes"
+                        Name="LoggingAgentAuthentication" DisplayName="Authentication Logging Service"
+                        Description="Logging Agent Authentication Service" Start="auto"
+                        Account="LocalSystem" ErrorControl="normal"
+                        Arguments=" /start LoggingAgentAuthentication"
+                        Interactive="no" />
+
+        <ServiceControl Id="StartService"  Stop="both" Start="install" Remove="uninstall"
+                        Name="LoggingAgentAuthentication" Wait="yes" />
+
+      </Component>
+
+    </ComponentGroup>
+
+  </Fragment>
+</Wix>

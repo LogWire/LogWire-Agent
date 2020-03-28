@@ -1,0 +1,11 @@
+X:\LogWire\Source\Agents\LogWire-Agent\Logwire.Agent.Workstation.Win\bin\Debug\Logwire.Agent.Workstation.Win.exe.config
+X:\LogWire\Source\Agents\LogWire-Agent\Logwire.Agent.Workstation.Win\bin\Debug\Logwire.Agent.Workstation.Win.exe
+X:\LogWire\Source\Agents\LogWire-Agent\Logwire.Agent.Workstation.Win\bin\Debug\Logwire.Agent.Workstation.Win.pdb
+X:\LogWire\Source\Agents\LogWire-Agent\Logwire.Agent.Workstation.Win\bin\Debug\Newtonsoft.Json.dll
+X:\LogWire\Source\Agents\LogWire-Agent\Logwire.Agent.Workstation.Win\bin\Debug\Newtonsoft.Json.xml
+X:\LogWire\Source\Agents\LogWire-Agent\Logwire.Agent.Workstation.Win\obj\Debug\Logwire.Agent.Win.csprojAssemblyReference.cache
+X:\LogWire\Source\Agents\LogWire-Agent\Logwire.Agent.Workstation.Win\obj\Debug\Logwire.Agent.Workstation.Win.ProjectInstaller.resources
+X:\LogWire\Source\Agents\LogWire-Agent\Logwire.Agent.Workstation.Win\obj\Debug\Logwire.Agent.Win.csproj.GenerateResource.cache
+X:\LogWire\Source\Agents\LogWire-Agent\Logwire.Agent.Workstation.Win\obj\Debug\Logwire.Agent.Win.csproj.CopyComplete
+X:\LogWire\Source\Agents\LogWire-Agent\Logwire.Agent.Workstation.Win\obj\Debug\Logwire.Agent.Workstation.Win.exe
+X:\LogWire\Source\Agents\LogWire-Agent\Logwire.Agent.Workstation.Win\obj\Debug\Logwire.Agent.Workstation.Win.pdb
